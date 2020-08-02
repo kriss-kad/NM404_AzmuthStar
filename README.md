@@ -9,7 +9,11 @@ After downloading the file, run the following command.
 
 > pip install -r requirements.txt
 
-Configure GDAL on your System using: 
+
+Configure GDAL on your System using:
+
+
+
 
 
 Download: https://drive.google.com/drive/folders/1DpwzJTsoUSpkvOVBPJw0tyI8PI8qKIae?usp=sharing

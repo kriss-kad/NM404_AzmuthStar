@@ -22,3 +22,14 @@ def Gdal_visible(dst_raw):
 #call function and pass file name
 
 #Gdal_visible('Filename')
+
+def Water_Extraction(src_file):
+    out_dst = src_file.split("\\")
+    out_dst = str(out_dst[-1])
+
+    #mention shapefile path here
+    shapefile = "Processes\\Shapefile\\Water\\World_Seas_IHO_v3.shp"
+
+    extraction = "gdalwarp -of GTiff -t_srs EPSG:3857 -cutline " + shapefile + " " + "-cwhere "+"\"ID='39'\"" + " " + src_file +" "+ "Processes\\Ocean\\"+out_dst
+    os.system(extraction)
+

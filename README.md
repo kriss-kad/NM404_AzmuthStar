@@ -43,6 +43,10 @@ Description : SAR satellites provide useful information for object detection. A 
   <img src="doc/soft_architecture.png">
 </p>
 
+## Software System Requirements
+
+**Operating System :** Windows 10 , 8 or 7, Linux , Mac.
+
 ## Steps
 ### 1. Installation of Gdal
 Gdal (Geospatial Data Abstraction Library) is a useful command tool to process spatial data.

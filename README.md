@@ -53,7 +53,7 @@ I. Check Python version and MSC version :
 3) After installation, go to Python IDLE to find out what version of Python you are using and make a note of the number that shows the version of your python in the top right as highlighted below:
 
 <p align="center">
-  <img src="doc/python_MSC.png">
+  <img src="doc/python_MSC.PNG">
 </p>
 
 I. Install GDAL :
@@ -148,4 +148,6 @@ pip install -r requirements.txt
 2) **Download the ShapeFile [Here](https://drive.google.com/drive/folders/1MKLMnlXF_3P_drw-DljkeEPCL6ekGfmC)**
 3) **Move Shapefile Directory to processes/**
 
+### 6. Testing 
 
+Basically, 

@@ -237,10 +237,8 @@ class AzmuthStar(Frame):
     def browsetrainFiles(self): 
         files = [('All (All)', '*.*'),('JPG (.jpg)', '*.jpg'),('PNG (.png)', '*.png'),('TIFF (.tiff)', '*.tiff')]
         filename = filedialog.askopenfilename(initialdir = "Processes\\Ocean\\", title = "Select a File", filetypes = files, defaultextension = files)
-        print(filename)
-        file_path = filename.replace('/','\\')
-        print(file_path)
-        main_detection(file_path)
+        in_file = filename.replace('/','\\')
+        main_detection(in_file)
         # cmd = 'python ' + 'single_file_testing.py' + ' ' + filename
         # os.system(cmd)
 
@@ -266,8 +264,18 @@ class AzmuthStar(Frame):
         self.land = Button(self.window, text="Land Extraction", command=land_extraction)
         self.land.pack(pady=2)
 
+    def showm(self):
+        os.system("python map.py")
+
     def showmap(self):
-        os.system('map.py')
+        self.window = Toplevel(self.master)
+        self.window.geometry('300x80')
+        self.window.iconphoto(False,PhotoImage(file='.img\\scissor.png'))
+        self.window.title("Land Water Descrimination")
+        button_map = Button(self.window, text="Map", borderwidth=2.5, command=self.showm)
+        button_map.pack(side='top',fill='x',pady=8)
+         
+
 
         
 def main():
@@ -340,7 +348,7 @@ def main():
     	ax.spines["bottom"].set_visible(False)
     	canvas1.draw()
 
-    button = Button(LeftSideBar, text="Load Image", command=_load)
+    button = Button(LeftSideBar, text="Display Image", command=_load)
     button.pack(side=TOP,pady=6)
 
     def convert_and_visible_open():

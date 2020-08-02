@@ -1,0 +1,11 @@
+geopy
+pyproj
+zipfile
+matplotlib
+sentinelsat
+opencv
+plotly
+pandas
+pyexcel
+numpy
+random

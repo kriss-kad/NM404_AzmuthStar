@@ -2,22 +2,10 @@
 ### Size Invariant Ship detection from SAR images...
 > ### Team : AzmuthStar
 
+### Install Packages before using the Program
+Download the file and run the following command.
 
-| Requirements  | 
-| ------------- | 
-| geopy         | 
-| pyproj        |
-| zipfile       |
-| matplotlib    |
-| sentinelsat   |
-| opencv        |
-| plotly        |
-| pandas        |
-| pyexcel       |
-| numpy         |
-| random        |
-----------------
-
+> pip install -r requirements.txt
 
 
 

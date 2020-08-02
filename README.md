@@ -1,5 +1,5 @@
 # NM404_AzmuthStar
-# Size Invariant Ship detection from SAR images.
+# Size Invariant Ship Detection From SAR Images.
 
 ## Brief Summary
 

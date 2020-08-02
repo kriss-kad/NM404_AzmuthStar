@@ -22,7 +22,7 @@ import matplotlib.pyplot as plt
 from sentinelsat import SentinelAPI, read_geojson, geojson_to_wkt
 from datetime import date
 #Import from another file 
-from  preprocessing import *
+from  Preprocessing import *
 #from Object_detection.yolo_object_detection import *
 from Object_detection.main_program import *
 

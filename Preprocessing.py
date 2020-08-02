@@ -42,4 +42,15 @@ def Land_Extraction(src_file):
 
     extraction = "gdalwarp -of GTiff -t_srs EPSG:3857 -cutline " + shapefile + " " + "-cwhere "+"\"ID='39'\"" + " " + src_file +" "+ "Processes\\Land\\"+out_dst
     os.system(extraction)
+    
+#call this fuction, it will convert given in_file to EPSG:3857 and store its output to process/raw/ dir,
+# Then it will pick converted file and perform gdal_translate and store its output to process/visible/ dir.
+def convert_and_visible(in_file):
+    print(in_file)
+    dst_raw = GdalWarp_Convert(in_file)
+    print("EPSG Done")
+
+    print(dst_raw)
+    Gdal_visible(dst_raw)
+    print("Pixel Scaling Done")
 

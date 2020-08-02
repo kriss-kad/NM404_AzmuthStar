@@ -145,7 +145,7 @@ pip install -r requirements.txt
 
 1) Yolo_Weights [You can also use your own yolo .weights file & .cfg by replacing them]
 2) **Download The Yolo Weight [HERE](https://drive.google.com/drive/folders/1Vj0SL16r9-9W_dD_hoBXfMHBIaE3lYxM).**
-3) **Move .weight and .cfg file in Object_detection/* Folder.**
+3) **Move .weight and .cfg file in Object_detection/*.**
 
 ### 5. Download Shapefile File and setup the file path
 1) Shapefile [You can also use your own shapefile for Land Water descrimination: Just go to the Preprocessing.py and paste your shapefile path to **LineNo 37.**]

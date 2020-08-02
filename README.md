@@ -1,13 +1,10 @@
 # NM404_AzmuthStar
-### Size Invariant Ship detection from SAR images...
+### Size Invariant Ship detection from SAR images.
 > ### Team : AzmuthStar
 
-### Install Packages before using the Program
-Download the file and run the following command.
+
+### Prerequisites
+Install this packages before using the software.
+After downloading the file, run the following command.
 
 > pip install -r requirements.txt
-
-
-
-
-  

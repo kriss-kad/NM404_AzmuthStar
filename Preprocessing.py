@@ -32,4 +32,14 @@ def Water_Extraction(src_file):
 
     extraction = "gdalwarp -of GTiff -t_srs EPSG:3857 -cutline " + shapefile + " " + "-cwhere "+"\"ID='39'\"" + " " + src_file +" "+ "Processes\\Ocean\\"+out_dst
     os.system(extraction)
+    
+def Land_Extraction(src_file):
+    out_dst = src_file.split("\\")
+    out_dst = str(out_dst[-1])
+
+     #mention shapefile path here
+    shapefile = "Processes\\Shapefile\\Land\\gadm36_IND_0.shp"  
+
+    extraction = "gdalwarp -of GTiff -t_srs EPSG:3857 -cutline " + shapefile + " " + "-cwhere "+"\"ID='39'\"" + " " + src_file +" "+ "Processes\\Land\\"+out_dst
+    os.system(extraction)
 

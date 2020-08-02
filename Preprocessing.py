@@ -53,4 +53,8 @@ def convert_and_visible(in_file):
     print(dst_raw)
     Gdal_visible(dst_raw)
     print("Pixel Scaling Done")
+    
+#import sys
+#filename = str(sys.argv[1])
+#convert_and_visible(filename)
 

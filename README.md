@@ -22,7 +22,7 @@ This readme describes every step required to run the application :
 The repository provides all the files needed to run the AzmuthStar Gui Application on your machine and the sample testing image provided in the SAMPLE folder.
 
 ## Introduction
-Aim : Size Invariant Ship Detection From SAR Images.
+Problem statement : Size Invariant Ship Detection From SAR Images.
 
 Organisation: Indian Space Research Organisation [ISRO]
 
@@ -154,4 +154,55 @@ pip install -r requirements.txt
 
 ### 6. Testing 
 
-Basically, 
+Basically, The testing of GUI is done in the following step : 
+
+<p align="center">
+  <img src="doc/part0.png">
+</p>
+
+To initialize the Azmuth Ship Application first of all we need to Login in SAR API by simply clicking on "Download" button and passing Username ,password, Product id.
+
+<p align="center">
+  <img src="doc/part1.PNG">
+</p>
+
+1) Log in SAR api.
+
+<p align="center">
+  <img src="doc/part2.PNG">
+</p>
+
+2) After pressing donwload button, the dataset is donwloaded under the present working directory of main.py program.
+3) Select the Downloaded dataset and it will Unzip in  process/Download/Unzip:
+ if we need to unzip the RAW dataset zip file.
+ 4) Now next step is To perform data preprocessing using gdal_translate and 
+gdal_warp on the RAW SAR image , Once the current process completes.
+5) We need to proceed for land water descrimination using shape file of ocean, 
+by simply clicking on the BUTTON of "Water Extraction".Along with we are able extract the land portion also.
+```
+*Our application will take 3 to 4 minutes to accomplish this process*
+```
+
+<p align="center">
+  <img src="doc/part3.PNG">
+</p>
+
+6) To achieve the main objective i.e. Ship Detection, Size Estimation from SAR images we need to simply click on the 
+BUTTON of "Detection".
+Then the below algorithm perform an operations on image.
+ ```
+ *Slicing ,Contouring , Detection, Checksum*
+ ```
+ 7) Then we need to store the coordinate and the Size of the detected ship in the .csv file for plotting the location of ship on world map, Click on "MAP" icon visualize the GEO TAG that specifies the size and length of the ship.
+ 
+<p align="center">
+  <img src="doc/part4.PNG">
+</p>
+
+8) Display image.
+
+<p align="center">
+  <img src="doc/part5.PNG">
+</p>
+
+ **Done!!**

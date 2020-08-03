@@ -160,7 +160,7 @@ Basically, The testing of GUI is done in the following step :
   <img src="doc/part0.png">
 </p>
 
-To initialize the Azmuth Ship Application first of all we need to Login in SAR API by simply clicking on "Download" button and passing Username ,password, Product id.
+To initialize the Azmuth Ship Application first of all we need to Login in SAR API by simply clicking on "Download" button and passing Username,password and Product id.
 
 <p align="center">
   <img src="doc/part1.PNG">
@@ -172,8 +172,8 @@ To initialize the Azmuth Ship Application first of all we need to Login in SAR A
   <img src="doc/part2.PNG">
 </p>
 
-2) After pressing donwload button, the dataset is donwloaded under the present working directory of main.py program.
-3) Select the Downloaded dataset and it will Unzip in  process/Download/Unzip:
+2) After pressing download button, the dataset is downloaded under the present working directory of main.py program.
+3) Select the Downloaded dataset and it will Unzip in process/Download/Unzip:
  if we need to unzip the RAW dataset zip file.
  4) Now next step is To perform data preprocessing using gdal_translate and 
 gdal_warp on the RAW SAR image , Once the current process completes.

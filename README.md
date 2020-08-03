@@ -191,7 +191,7 @@ by simply clicking on the BUTTON of "Water Extraction".Along with we are able ex
 BUTTON of "Detection".
 Then the below algorithm perform an operations on image.
  ```
- *Slicing ,Contouring , Detection, Checksum*
+ * Slicing ,Contouring , Detection, Checksum *
  ```
  7) Then we need to store the coordinate and the Size of the detected ship in the .csv file for plotting the location of ship on world map, Click on "MAP" icon visualize the GEO TAG that specifies the size and length of the ship.
  

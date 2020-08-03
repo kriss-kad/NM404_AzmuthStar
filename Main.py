@@ -22,7 +22,7 @@ import matplotlib.pyplot as plt
 from sentinelsat import SentinelAPI, read_geojson, geojson_to_wkt
 from datetime import date
 #Import from another file 
-from  Preprocessing import *
+from  preprocessing import *
 #from Object_detection.yolo_object_detection import *
 from Object_detection.main_program import *
 
@@ -71,7 +71,7 @@ class AzmuthStar(Frame):
         toolbar = Frame(self.master, bd=1, relief=RAISED)
 
         #Open
-        self.img = Image.open(".img\\folder.png")
+        self.img = Image.open("img\\folder.png")
         openimg = ImageTk.PhotoImage(self.img)
 
         openButton = Button(toolbar, image=openimg, relief=FLAT,
@@ -84,7 +84,7 @@ class AzmuthStar(Frame):
         self.pack()
 
         #Save
-        self.img = Image.open(".img\\save.png")
+        self.img = Image.open("img\\save.png")
         saveimg = ImageTk.PhotoImage(self.img)
 
         openButton = Button(toolbar, image=saveimg, relief=FLAT,
@@ -97,7 +97,7 @@ class AzmuthStar(Frame):
         self.pack()
 
         #Download
-        self.img = Image.open(".img\\download.png")
+        self.img = Image.open("img\\download.png")
         downimg = ImageTk.PhotoImage(self.img)
 
         openButton = Button(toolbar, image=downimg, relief=FLAT,
@@ -110,7 +110,7 @@ class AzmuthStar(Frame):
         self.pack()
 
         #Discrimination
-        self.img = Image.open(".img\\scissor.png")
+        self.img = Image.open("img\\scissor.png")
         cutimg = ImageTk.PhotoImage(self.img)
 
         openButton = Button(toolbar, image=cutimg, relief=FLAT,
@@ -123,7 +123,7 @@ class AzmuthStar(Frame):
         self.pack()
 
         #Detection
-        self.img = Image.open(".img\\search.png")
+        self.img = Image.open("img\\search.png")
         searchimg = ImageTk.PhotoImage(self.img)
 
         openButton = Button(toolbar, image=searchimg, relief=FLAT,
@@ -136,7 +136,7 @@ class AzmuthStar(Frame):
         self.pack()
 
         #Map
-        self.img = Image.open(".img\\location.png")
+        self.img = Image.open("img\\location.png")
         Mapimg = ImageTk.PhotoImage(self.img)
 
         openButton = Button(toolbar, image=Mapimg, relief=FLAT,
@@ -149,7 +149,7 @@ class AzmuthStar(Frame):
         self.pack()
 
         #Exit
-        self.img = Image.open(".img\\exit.png")
+        self.img = Image.open("img\\exit.png")
         eimg = ImageTk.PhotoImage(self.img)
 
         exitButton = Button(toolbar, image=eimg, relief=FLAT,
@@ -188,7 +188,7 @@ class AzmuthStar(Frame):
     def down_window(self):
         self.window = Toplevel(self.master)
         self.window.geometry('320x100')
-        self.window.iconphoto(False,PhotoImage(file='.img\\download.png'))
+        self.window.iconphoto(False,PhotoImage(file='img\\download.png'))
         self.window.title("Copernicus Open Access Hub")
 
         self.label_username = Label(self.window, text="Username")
@@ -237,15 +237,17 @@ class AzmuthStar(Frame):
     def browsetrainFiles(self): 
         files = [('All (All)', '*.*'),('JPG (.jpg)', '*.jpg'),('PNG (.png)', '*.png'),('TIFF (.tiff)', '*.tiff')]
         filename = filedialog.askopenfilename(initialdir = "Processes\\Ocean\\", title = "Select a File", filetypes = files, defaultextension = files)
-        in_file = filename.replace('/','\\')
-        main_detection(in_file)
+        print(filename)
+        file_path = filename.replace('/','\\')
+        print(file_path)
+        main_detection(file_path)
         # cmd = 'python ' + 'single_file_testing.py' + ' ' + filename
         # os.system(cmd)
 
     def land_water_descrimination(self):
         self.window = Toplevel(self.master)
         self.window.geometry('300x80')
-        self.window.iconphoto(False,PhotoImage(file='.img\\scissor.png'))
+        self.window.iconphoto(False,PhotoImage(file='img\\scissor.png'))
         self.window.title("Land Water Descrimination")
         def water_extraction():
         	files = [('All (All)', '*.*'),('TIFF (.tiff)', '*.tiff')]
@@ -264,18 +266,8 @@ class AzmuthStar(Frame):
         self.land = Button(self.window, text="Land Extraction", command=land_extraction)
         self.land.pack(pady=2)
 
-    def showm(self):
-        os.system("python map.py")
-
     def showmap(self):
-        self.window = Toplevel(self.master)
-        self.window.geometry('300x80')
-        self.window.iconphoto(False,PhotoImage(file='.img\\scissor.png'))
-        self.window.title("Land Water Descrimination")
-        button_map = Button(self.window, text="Map", borderwidth=2.5, command=self.showm)
-        button_map.pack(side='top',fill='x',pady=8)
-         
-
+        os.system('python map.py')
 
         
 def main():
@@ -283,7 +275,7 @@ def main():
     colList=[]
     root = Tk()
     root.geometry("1100x600+300+300")
-    root.iconphoto(False,PhotoImage(file='.img\\main.png'))
+    root.iconphoto(False,PhotoImage(file='img\\main.png'))
     root.configure(bg='white')
     statusbar = Label(root, text="Welcome ,",relief=SUNKEN, anchor=W)
     statusbar.pack(side=BOTTOM, fill=X)

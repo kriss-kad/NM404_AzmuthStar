@@ -25,6 +25,7 @@ from datetime import date
 from  preprocessing import *
 #from Object_detection.yolo_object_detection import *
 from Object_detection.main_program import *
+os.environ['PROJ_LIB'] = 'C:\\Program Files\\GDAL\\projlib\\'
 
 class AzmuthStar(Frame):
     def __init__(self):

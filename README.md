@@ -99,22 +99,20 @@ II. Adding Path Variable :
 
 5) Go to the end of the box and copy and paste the following:
 ```
-C:\Program Files (x86)\GDAL
+C:\Program Files\GDAL
 ```
 6) In the same System variables pane, click on “New” and then add the following in the dialogue box:
 ```
 Variable name : GDAL_DATA
-Variable value : C:\Program Files (x86)\GDAL\gdal-data
+Variable value : C:\Program Files\GDAL\gdal-data
 ```
 7) Click Ok!
 8) Add one more new variable by clicking “New…”
 9) Add the following in the dialogue box:
 ```
 Variable name : GDAL_DRIVER_PATH
-Variable value : C:\Program Files (x86)\GDAL\gdalplugins
+Variable value : C:\Program Files\GDAL\gdalplugins
 ```
-10) Click “OK”
-
 III. Testing the GDAL installation : 
 
 1) Open CMD and Type:

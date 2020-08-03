@@ -7,7 +7,7 @@
 
 This repository is a tutorial for how to use AzmuthStar Apllication on Windows 10, 8, or 7. (It will also work on Linux-based Os with some minor changes.) It was originally written using Python 3.7x, but will also work for newer versions Python.
 
-we also made a YouTube video that walks through a demo tutorial.
+We have also made a YouTube video that walks through the overview of our project.
 
 [![YouTube video!](https://github.com/kriss-kad/NM404_AzmuthStar/blob/master/doc/Main.PNG)](https://www.youtube.com/watch?v=5nwadU7w8Z8)
 
